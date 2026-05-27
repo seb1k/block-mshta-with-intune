@@ -1,9 +1,14 @@
+# Block outbound connections for mshta.exe using Intune Firewall Rules
 
-
-Validate the Microsoft Secure Score recommendation:
+This configuration validates the Microsoft Secure Score recommendation:
 
 > **Block outbound network connections from Microsoft HTML Application Host (`mshta.exe`)**
 
+## Why block mshta.exe?
+
+`mshta.exe` is frequently abused by attackers to execute malicious HTA payloads and establish outbound connections.
+
+Blocking outbound traffic helps reduce the attack surface and improves Microsoft Secure Score compliance.
 
 ## Go to Intune > Endpoint security \| Firewall
 
@@ -22,9 +27,9 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 - Description : Block outbound network connections from Microsoft HTML Application Host (mshta.exe)
 
 #### Configuration Settings
-- Add 2 rules :
-- Block C:\Windows\SysWOW64\mshta.exe
-- Block C:\Windows\System32\mshta.exe
+- Add 2 firewall rules:
+  - `C:\Windows\SysWOW64\mshta.exe`
+  - `C:\Windows\System32\mshta.exe`
 - Set the action to **Block** for both rules.
 <img width="987" height="200" alt="image" src="https://github.com/user-attachments/assets/6426149f-164d-4d74-b21f-3535bd6b15c8" />
 
@@ -32,7 +37,7 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 **Rule 1 Click Edit instance :**
 - Enable : **Enabled**
 - Interfaces types : **All**
-- File Path : Click **configure** -> **C:\Windows\SysWOW64\mshta.exe**
+- File Path: Click **Configure** → `C:\Windows\SysWOW64\mshta.exe`
 <img width="897" height="155" alt="image" src="https://github.com/user-attachments/assets/4c9f5186-365d-48b5-9c52-f0070b3e3fd1" />
 <br/>
 <img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/36ccdacc-008a-4d3b-89e5-2722200fd479" />
@@ -41,7 +46,7 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 **Rule 2 Click Edit instance :**
 - Enable : **Enabled**
 - Interfaces types : **All**
-- File Path : Click **configure** -> **C:\Windows\System32\mshta.exe**
+- File Path : Click **configuree** → `C:\Windows\System32\mshta.exe**`
 <img width="906" height="157" alt="image" src="https://github.com/user-attachments/assets/7311b907-8ed0-4a01-a0e1-d952d286cc0a" />
 <br/>
 <img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/36ccdacc-008a-4d3b-89e5-2722200fd479" />
@@ -49,7 +54,7 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 
 #### Scope Tags
 Nothing
-#### Assignements
+#### Assignments
 - **All devices**
 <img width="304" height="147" alt="image" src="https://github.com/user-attachments/assets/dc844e9c-23aa-4c33-bbdf-22017320966c" />
 
