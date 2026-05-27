@@ -1,5 +1,12 @@
 # Block outbound connections for mshta.exe using Intune Firewall Rules
 
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows)
+![Intune](https://img.shields.io/badge/Microsoft-Intune-0078D4?logo=microsoft)
+![Security](https://img.shields.io/badge/Security-Hardening-red)
+[![MITRE](https://img.shields.io/badge/MITRE-T1218.005-red)](https://attack.mitre.org/techniques/T1218/005/)
+[![LOLBAS](https://img.shields.io/badge/LOLBAS-mshta.exe-orange)](https://lolbas-project.github.io/lolbas/Binaries/Mshta/)
+
+
 This configuration validates the Microsoft Secure Score recommendation:
 
 > **Block outbound network connections from Microsoft HTML Application Host (`mshta.exe`)**
