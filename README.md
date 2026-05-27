@@ -46,7 +46,7 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 **Rule 2 Click Edit instance :**
 - Enable : **Enabled**
 - Interfaces types : **All**
-- File Path : Click **configuree** → `C:\Windows\System32\mshta.exe**`
+- File Path : Click **configuree** → `C:\Windows\System32\mshta.exe`
 <img width="906" height="157" alt="image" src="https://github.com/user-attachments/assets/7311b907-8ed0-4a01-a0e1-d952d286cc0a" />
 <br/>
 <img width="80" height="32" alt="image" src="https://github.com/user-attachments/assets/36ccdacc-008a-4d3b-89e5-2722200fd479" />
