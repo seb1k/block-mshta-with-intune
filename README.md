@@ -28,8 +28,8 @@ https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Workflows/Se
 
 #### Configuration Settings
 - Add 2 firewall rules:
-  - `C:\Windows\SysWOW64\mshta.exe`
-  - `C:\Windows\System32\mshta.exe`
+  - **Block C:\Windows\SysWOW64\mshta.exe**
+  - **Block C:\Windows\System32\mshta.exe**
 - Set the action to **Block** for both rules.
 <img width="987" height="200" alt="image" src="https://github.com/user-attachments/assets/6426149f-164d-4d74-b21f-3535bd6b15c8" />
 
