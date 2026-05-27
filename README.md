@@ -6,7 +6,7 @@
 [![MITRE](https://img.shields.io/badge/MITRE-T1218.005-red)](https://attack.mitre.org/techniques/T1218/005/)
 [![LOLBAS](https://img.shields.io/badge/LOLBAS-mshta.exe-orange)](https://lolbas-project.github.io/lolbas/Binaries/Mshta/)
 
-
+---
 This configuration validates the Microsoft Secure Score recommendation:
 
 > **Block outbound network connections from Microsoft HTML Application Host (`mshta.exe`)**
@@ -70,4 +70,9 @@ Nothing
 <img width="88" height="37" alt="image" src="https://github.com/user-attachments/assets/e16819f6-d4e7-4958-b5c5-30de618b00eb" />
 
 
+## Validation
 
+Test the policy with:
+
+```powershell
+Get-NetFirewallRule  -PolicyStore ActiveStore | Where-Object {$_.DisplayName -like "*mshta*"}
